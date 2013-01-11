@@ -1,0 +1,17 @@
+<%= form_tag '/sha1' do %>
+<div class="field">
+  Texto:<br />
+  <%= password_field_tag :texto, @texto, :size => 30 %>
+</div>
+<div class="actions">
+  <%= submit_tag 'Enviar' %>
+</div>
+<div class="field">
+  SHA1:<br />
+  <%= text_field_tag :sha1, @sha1, :size => 80 %> <%= link_to("Google it!", "http://www.google.com/search?q=#{@sha1}", :target => "_blank") if !@sha1.nil? && !@sha1.blank? %>
+</div>
+<div class="field">
+  md5:<br />
+  <%= text_field_tag :md5, @md5, :size => 80 %> <%= link_to("Google it!", "http://www.google.com/search?q=#{@md5}", :target => "_blank") if !@md5.nil? && !@md5.blank? %>
+</div>
+<% end %>
