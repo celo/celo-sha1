@@ -14,4 +14,5 @@
   md5:<br />
   <%= text_field_tag :md5, @md5, :size => 80 %> <%= link_to("Google it!", "http://www.google.com/search?q=#{@md5}", :target => "_blank") if !@md5.nil? && !@md5.blank? %>
 </div>
+
 <% end %>
